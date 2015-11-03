@@ -1,0 +1,23 @@
+claves (R,F)
+
+    keys = empty
+    
+    current = P({determinantes de F})
+    
+    size_current = size ({determinantes de F})
+    
+    skey = 1
+    
+    while (skey <= size_current){
+    
+        foreach x e current / size(x) = skey{
+        
+            if cierre(x,F) = R then { insert x keys,
+                                      foreach y e current{
+                                            if (x--contenido igual en--y) then delete y current
+                                      }
+                                    }
+        }
+        
+        skey++
+    }
